@@ -24,6 +24,8 @@ Sebelum menjalankan tes, pastikan Anda telah menginstal:
 2. Newman:
    ```bash
    npm install -g newman
-
-    ```bash
+   ```
+   
+   ```bash
    npx newman run Petstore_Test.json -r "cli,htmlextra"
+   ```
