@@ -1,6 +1,6 @@
 # 🐾 Petstore API Automation Test: Postman & Newman
 
-Project ini berisi rangkaian pengujian otomatis (Automation Testing) untuk **Petstore Swagger API** menggunakan **Postman** sebagai Test Runner dan **Newman** untuk eksekusi melalui Command Line Interface (CLI) serta pembuatan laporan (reporting).
+This project contains a series of automated tests (Automation Testing) for the **Petstore Swagger API** using **Postman** as a Test Runner and **Newman** for execution via the Command Line Interface (CLI) and reporting.
 
 <img width="1918" height="1023" alt="api0" src="https://github.com/user-attachments/assets/884305b0-c4f9-4fff-ab16-0f58a43d0f37" />
 
@@ -11,16 +11,16 @@ Project ini berisi rangkaian pengujian otomatis (Automation Testing) untuk **Pet
 <img width="1919" height="1022" alt="Api3" src="https://github.com/user-attachments/assets/cc2e03ef-21a1-4668-a92d-512992c5322a" />
 
 
-## 🚀 Cakupan Pengujian
-Project ini mencakup **15 Test Case** yang terdiri dari skenario positif dan negatif, termasuk:
-- **API Chaining**: Menggunakan data dari respon satu API (ID Pet) untuk digunakan pada API berikutnya (Update/Delete).
-- **Positive Testing**: Menambah, mencari, mengupdate, dan menghapus data pet.
-- **Negative Testing**: Validasi input salah, ID tidak ditemukan, dan format data tidak sesuai.
-- **Assertions**: Validasi Status Code dan Response Body JSON.
+## 🚀 Testing Scope
+This project includes 15 test cases consisting of positive and negative scenarios, including:
+- **API Chaining:** Using data from one API response (Pet ID) for use in the next API (Update/Delete).
+- **Positive Testing:** Adding, searching, updating, and deleting pet data.
+- **Negative Testing:** Incorrect input validation, missing ID, and incorrect data format.
+- **Assertions:** Validating the status code and JSON response body.
 
-## 🛠️ Prasyarat (Prerequisites)
-Sebelum menjalankan tes, pastikan Anda telah menginstal:
-1. [Node.js](https://nodejs.org/) (Versi terbaru direkomendasikan).
+## 🛠️ Prerequisites
+Before running the test, make sure you have installed:
+1. [Node.js](https://nodejs.org/) (Latest version recommended).
 2. Newman:
    ```bash
    npm install -g newman
