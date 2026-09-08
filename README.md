@@ -1,4 +1,4 @@
-# 🐾 Petstore API Automation Test: Postman & Newman
+# 🐾 Petstore API Automation Test: Postman & Newman 
 
 This project contains a series of automated tests (Automation Testing) for the **Petstore Swagger API** using **Postman** as a Test Runner and **Newman** for execution via the Command Line Interface (CLI) and reporting.
 
