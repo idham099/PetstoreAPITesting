@@ -6,9 +6,9 @@
 
 This project contains a series of automated tests (Automation Testing) for the **Petstore Swagger API** using **Postman** as a Test Runner and **Newman** for execution via the Command Line Interface (CLI) and reporting.
 
-Here is the demo : **[Demo Testing](https://youtu.be/ZQRXa5zXRm0?si=53kvlwNWhGvSpI6z)**
+Here is the demo : 👉 **[Demo Testing](https://youtu.be/ZQRXa5zXRm0?si=53kvlwNWhGvSpI6z)**
 
-Here is the link : **[Article](https://ainul-idhamid.blogspot.com/2026/01/project-petstore-api-automation-testing.html)**
+Here is the link : 👉 **[Article](https://ainul-idhamid.blogspot.com/2026/01/project-petstore-api-automation-testing.html)**
 
 <img width="1918" height="1023" alt="api0" src="https://github.com/user-attachments/assets/884305b0-c4f9-4fff-ab16-0f58a43d0f37" />
 
