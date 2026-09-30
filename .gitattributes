@@ -1,0 +1,6 @@
+# Mengabaikan seluruh folder laporan/report dari statistik Linguist
+reports/** linguist-vendored
+reports/** linguist-detectable=false
+
+# Mengabaikan semua berkas HTML spesifik jika berada di luar folder tertentu
+*.html linguist-detectable=false
