@@ -1,0 +1,4 @@
+# Abaikan folder laporan hasil pengujian
+html-report/
+reports/
+*.html
