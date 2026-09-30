@@ -1,10 +1,7 @@
-# Mengabaikan seluruh folder laporan/report dari statistik Linguist
-reports/** linguist-vendored
+# Mengabaikan laporan HTML
+*.html linguist-detectable=false
 reports/** linguist-detectable=false
 
-# Mengabaikan semua berkas HTML spesifik jika berada di luar folder tertentu
-*.html linguist-detectable=false
-
-# Menganggap berkas .jmx atau .json sebagai bahasa pemrograman/konfigurasi utama
-*.jmx linguist-language=XML
-*.js linguist-language=JavaScript
+# Memaksa GitHub menghitung berkas JSON Postman ke dalam statistik bahasa
+*.json linguist-detectable=true
+*.json linguist-language=JSON
