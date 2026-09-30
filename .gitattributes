@@ -4,3 +4,7 @@ reports/** linguist-detectable=false
 
 # Mengabaikan semua berkas HTML spesifik jika berada di luar folder tertentu
 *.html linguist-detectable=false
+
+# Menganggap berkas .jmx atau .json sebagai bahasa pemrograman/konfigurasi utama
+*.jmx linguist-language=XML
+*.js linguist-language=JavaScript
