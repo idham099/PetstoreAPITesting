@@ -1,4 +1,4 @@
-# 🐾 Petstore API Automation Test: Postman & Newman
+# Petstore API Automation Test: Postman & Newman
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)
 ![Newman](https://img.shields.io/badge/Newman-FF6C37?logo=postman&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
