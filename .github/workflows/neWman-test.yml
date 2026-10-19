@@ -1,0 +1,41 @@
+name: Petstore API Automated Tests
+
+# Kapan workflow ini akan dijalankan
+on:
+  push:
+    branches: [ "main" ] # Berjalan otomatis saat ada push ke branch main
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Ambil kode dari repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # 2. Set up Node.js di server GitHub
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    # 3. Install Newman dan Reporter secara global di server GitHub
+    - name: Install Newman & Reporter
+      run: |
+        npm install -g newman
+        npm install -g newman-reporter-htmlextra
+
+    # 4. Jalankan Newman menggunakan file JSON Anda
+    - name: Run Postman Collection via Newman
+      run: |
+        newman run Petstore_Test.json -r cli,htmlextra
+
+    # 5. Simpan file HTML Report sebagai artefak (bisa didownload nanti)
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: petstore-html-report
+        path: newman/*.html
