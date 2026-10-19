@@ -1,41 +1,56 @@
 name: Petstore API Automated Tests
 
-# Kapan workflow ini akan dijalankan
 on:
   push:
-    branches: [ "main" ] # Berjalan otomatis saat ada push ke branch main
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
+# Berikan izin agar workflow bisa menulis ke GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   test-api:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Ambil kode dari repository
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # 2. Set up Node.js di server GitHub
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
 
-    # 3. Install Newman dan Reporter secara global di server GitHub
     - name: Install Newman & Reporter
       run: |
         npm install -g newman
         npm install -g newman-reporter-htmlextra
 
-    # 4. Jalankan Newman menggunakan file JSON Anda
     - name: Run Postman Collection via Newman
       run: |
         newman run Petstore_Test.json -r cli,htmlextra
 
-    # 5. Simpan file HTML Report sebagai artefak (bisa didownload nanti)
-    - name: Upload HTML Report
-      uses: actions/upload-artifact@v4
+    # 1. Ubah nama file HTML agar mudah diakses (menjadi index.html)
+    - name: Prepare HTML Report for Pages
+      run: |
+        mkdir -p public
+        cp newman/*.html public/index.html
+
+    # 2. Upload file ke GitHub Pages
+    - name: Upload artifact for GitHub Pages
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: petstore-html-report
-        path: newman/*.html
+        path: 'public'
+
+  # Job tambahan untuk melakukan deployment
+  deploy:
+    needs: test-api
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
