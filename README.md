@@ -3,6 +3,7 @@
 ![Newman](https://img.shields.io/badge/Newman-FF6C37?logo=postman&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
 ![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+[![Petstore API Automated Tests](https://github.com/idham099/PetstoreAPITesting/actions/workflows/neWman-test.yml/badge.svg)](https://github.com/idham099/PetstoreAPITesting/actions/workflows/neWman-test.yml)
 
 This project contains a series of automated tests (Automation Testing) for the **Petstore Swagger API** using **Postman** as a Test Runner and **Newman** for execution via the Command Line Interface (CLI) and reporting.
 
